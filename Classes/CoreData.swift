@@ -47,8 +47,9 @@ public class CoreData {
     }
     
     /// Create new entry on the default context
-    public static func new<T>(_ entityClass: T.Type) throws -> T where T: Entity {
-        guard let object = NSEntityDescription.insertNewObject(forEntityName: T.entityName, into: CoreData.managedContext) as? T else {
+    public static func new<T>(_ entityClass: T.Type, on context: NSManagedObjectContext = CoreData.managedContext) throws -> T where T: Entity {
+        let o = NSEntityDescription.insertNewObject(forEntityName: T.entityName, into: context)
+        guard let object = o as? T else {
             throw Problem.unableToCreateEntity
         }
         return object

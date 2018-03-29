@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 /// Type erased Entity
 public protocol AnyEntity {
@@ -68,6 +68,12 @@ extension Entity {
     /// Save context
     public func save() throws {
         try CoreData.saveContext()
+    }
+    
+    /// Create new entity
+    public static func new(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Self {
+        let object = try CoreData.new(Self.self, on: context)
+        return object
     }
     
 }

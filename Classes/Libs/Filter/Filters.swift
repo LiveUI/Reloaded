@@ -11,6 +11,7 @@ import Foundation
 
 /// Defines a `Filter` that can be added on fetch operations to limit the set of data affected.
 public struct QueryFilter {
+    
     /// The field to filer.
     public var field: QueryField
     
@@ -26,6 +27,17 @@ public struct QueryFilter {
         self.type = type
         self.value = value
     }
+    
+}
+
+
+extension QueryFilter {
+    
+    public func predicate() -> NSPredicate {
+        let predicate = NSPredicate(format: "\(field.name) == %@", value.value)
+        return predicate
+    }
+    
 }
 
 

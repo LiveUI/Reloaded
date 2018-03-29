@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15B758F1206D335D0080AB5E"
-               BuildableName = "Reloaded_watchOS.framework"
+               BuildableName = "Reloaded.framework"
                BlueprintName = "Reloaded-watchOS"
                ReferencedContainer = "container:Reloaded.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15B758F1206D335D0080AB5E"
-            BuildableName = "Reloaded_watchOS.framework"
+            BuildableName = "Reloaded.framework"
             BlueprintName = "Reloaded-watchOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15B758F1206D335D0080AB5E"
-            BuildableName = "Reloaded_watchOS.framework"
+            BuildableName = "Reloaded.framework"
             BlueprintName = "Reloaded-watchOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>

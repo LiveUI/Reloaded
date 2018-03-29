@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15B758A3206D32B00080AB5E"
-               BuildableName = "Reloaded_iOS.framework"
+               BuildableName = "Reloaded.framework"
                BlueprintName = "Reloaded-iOS"
                ReferencedContainer = "container:Reloaded.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15B758A3206D32B00080AB5E"
-            BuildableName = "Reloaded_iOS.framework"
+            BuildableName = "Reloaded.framework"
             BlueprintName = "Reloaded-iOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15B758A3206D32B00080AB5E"
-            BuildableName = "Reloaded_iOS.framework"
+            BuildableName = "Reloaded.framework"
             BlueprintName = "Reloaded-iOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15B758A3206D32B00080AB5E"
-            BuildableName = "Reloaded_iOS.framework"
+            BuildableName = "Reloaded.framework"
             BlueprintName = "Reloaded-iOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>

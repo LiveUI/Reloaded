@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class Query<QueryEntityType>: QueryConvertible where QueryEntityType: Entity {
+public class Query<QueryEntityType>: QueryExecutable where QueryEntityType: Entity {
     
     public var entity: QueryEntityType.Type
     

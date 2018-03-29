@@ -1,5 +1,5 @@
 //
-//  QueryConvertible.swift
+//  QueryExecutable.swift
 //  Reloaded
 //
 //  Created by Ondrej Rafaj on 29/03/2018.
@@ -10,25 +10,32 @@ import Foundation
 import CoreData
 
 
-public protocol QueryConvertible {
+public protocol QueryExecutable {
     associatedtype EntityType: Entity
     
     var entity: EntityType.Type { get }
     
     var filters: [QueryFilter] { get set }
     var sorts: [QuerySort] { get set }
+    var limit: Int? { get set }
     
     init(_ entityType: EntityType.Type)
     func fetchRequest() -> Entity.Request
 }
 
 
-extension QueryConvertible {
+extension QueryExecutable {
     
     /// Get compiled fetch request
     public func fetchRequest() -> Entity.Request {
         let fetch = Entity.Request(entityName: entity.entityName)
-        // TODO: Do the fetch
+        if !filters.isEmpty {
+            if filters.count == 1, let filter = filters.first {
+                fetch.predicate = filter.predicate()
+            } else {
+                
+            }
+        }
         return fetch
     }
     
