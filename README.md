@@ -9,8 +9,8 @@ A brand new Swift abstraction layer for CoreData's original interface
 [![Jenkins](https://ci.liveui.io/job/LiveUI/job/Boost/job/master/badge/icon)](https://ci.liveui.io/job/LiveUI/job/Reloaded/)
 [![Platforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS|%20tvOS|%20watchOS-ff0000.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
 [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](http://swift.org)
-[![Version](https://img.shields.io/cocoapods/v/AwesomeEnum.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
-[![License](https://img.shields.io/cocoapods/l/AwesomeEnum.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
+[![Version](https://img.shields.io/cocoapods/v/Reloaded.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
+[![License](https://img.shields.io/cocoapods/l/Reloaded.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
 
 
 ##
