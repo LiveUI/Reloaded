@@ -17,14 +17,23 @@ A brand new Swift abstraction layer for CoreData's original interface
 
 > <b style="color:red;">Warning! - *Project is not yet completely finished. We are going to release an alpha version in April, contact us on Slack for ETA or follow the status below*</b>
 
-## Usage
+## Basic usage
 
 ```swift
+import Reloaded
+
+// Conform your NSManagedObject to Reloaded own protocol `Entity`
+extension Locomotive: Entity { }
+
+// Creating a new object
 let loco = try! Locomotive.new()
 loco.color = "black"
 loco.hasChimney = true
+
+// Save an object
 try! loco.save()
 
-let all = try! Locomotive.query.filter("color" == "black").sort(by: "color", direction: .orderedDescending).all()
+// Fetching all black locomotives with a chimney sorted by color
+let all = try! Locomotive.query.filter("color" == "red", "hasChimney" == true).sort(by: "color", direction: .orderedDescending).all()
 print(all)
 ```

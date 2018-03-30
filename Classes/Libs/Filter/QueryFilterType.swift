@@ -21,6 +21,25 @@ public struct QueryFilterType: Equatable {
         case custom(String)
     }
     
+    public var interpretation: String {
+        switch storage {
+        case .equals:
+            return "="
+        case .notEquals:
+            return "!="
+        case .greaterThan:
+            return ">"
+        case .lessThan:
+            return "<"
+        case .greaterThanOrEquals:
+            return ">="
+        case .lessThanOrEquals:
+            return "<="
+        case .custom(let custom):
+            return custom
+        }
+    }
+    
     /// Internal storage.
     let storage: Storage
     

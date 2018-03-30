@@ -39,13 +39,13 @@ extension QueryFilter {
     
     public func asPredicate() -> NSPredicate {
         if let value = value as? String {
-            let predicate = NSPredicate(format: "\(field.name) = %@", value)
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) %@", value)
             return predicate
         } else if let value = value as? Bool {
-            let predicate = NSPredicate(format: "\(field.name) = %@", value ? "true" : "false")
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) %@", value ? "true" : "false")
             return predicate
         } else if let value = value as? LosslessStringConvertible {
-            let predicate = NSPredicate(format: "\(field.name) = \(value)")
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) \(value)")
             return predicate
         }
         fatalError("Not implemented")
