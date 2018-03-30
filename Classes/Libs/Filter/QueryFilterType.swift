@@ -24,7 +24,7 @@ public struct QueryFilterType: Equatable {
     public var interpretation: String {
         switch storage {
         case .equals:
-            return "="
+            return "=="
         case .notEquals:
             return "!="
         case .greaterThan:

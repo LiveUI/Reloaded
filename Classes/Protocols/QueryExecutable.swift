@@ -46,6 +46,15 @@ extension QueryExecutable {
         return data
     }
     
+    public func delete(on context: NSManagedObjectContext = CoreData.managedContext) throws {
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest())
+        
+        guard let persistentStoreCoordinator = context.persistentStoreCoordinator else {
+            throw CoreData.Problem.invalidPersistentStoreCoordinator
+        }
+        try persistentStoreCoordinator.execute(deleteRequest, with: context)
+    }
+    
     public func count(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Int {
         return try context.count(for: fetchRequest())
     }

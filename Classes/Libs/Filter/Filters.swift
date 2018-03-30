@@ -26,10 +26,10 @@ extension Query {
 }
 
 /// field == value
-public func == (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+public func == (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
 }
-public func == (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+public func == (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
 }
 

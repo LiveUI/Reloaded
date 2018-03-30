@@ -41,9 +41,9 @@ struct NULL: ExactQueryDataRepresentable {
     
 }
 
-struct Bool: ExactQueryDataRepresentable {
+extension Bool: ExactQueryDataRepresentable {
     
-    var value: String {
+    public var value: String {
         return self ? "true" : "false"
     }
     

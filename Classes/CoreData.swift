@@ -16,6 +16,7 @@ public class CoreData {
     public enum Problem: Error {
         case unableToCreateEntity
         case badData
+        case invalidPersistentStoreCoordinator
     }
     
     /// Default implementation, should be sufficient in most cases

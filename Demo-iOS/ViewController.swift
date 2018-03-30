@@ -18,13 +18,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loco = try! Locomotive.new()
-        loco.color = "black"
-        loco.hasChimney = true
-        try! loco.save()
+        let colors = ["red", "blue", "green", "yellow", "purple", "ping", "black"]
+        var hasChimney = true
         
-        let all = try! Locomotive.query.filter("hasChimney" == true).sort(by: "color", direction: .orderedDescending).all()
-        print(all)
+        for color in colors {
+            let loco = try! Locomotive.new()
+            loco.color = color
+            loco.hasChimney = hasChimney
+            try! loco.save()
+            
+            hasChimney = !hasChimney
+        }
+        
+        let all = try! Locomotive.query.filter("hasChimney" == true).filter(.or, "color" == "green", "color" == "black").sort(by: "color", direction: .orderedDescending).all()
+        all.forEach { loco in
+            print("Color: \(loco.color ?? "Unknown"); Chimney: \(Bool(loco.hasChimney))")
+        }
     }
 
 }

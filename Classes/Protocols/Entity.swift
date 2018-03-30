@@ -10,17 +10,16 @@ import Foundation
 import CoreData
 
 /// Type erased Entity
-public protocol AnyEntity {
+public protocol AnyEntity: class {
     /// Name of the entity
     static var entityName: String { get }
 }
 
-public protocol Entity: AnyEntity {
-    
-}
+/// Entity
+public protocol Entity: AnyEntity { }
 
-
-extension Entity {
+/// Entity extension for NSManagedObject
+extension Entity where Self: NSManagedObject {
     
     /// Typealias for NSFetchRequest
     public typealias Request = NSFetchRequest<NSFetchRequestResult>
@@ -59,6 +58,18 @@ extension Entity {
         return all
     }
     
+    /// Delete all data for this entity
+    public static func deleteAll(on context: NSManagedObjectContext = CoreData.managedContext) throws {
+        try query.delete(on: context)
+    }
+    
+    /// Delete this object
+    @discardableResult public func delete(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Bool {
+        context.delete(self)
+        try save(on: context)
+        return isDeleted
+    }
+    
     /// Count all items
     public static func count() throws -> Int {
         let count = try CoreData.managedContext.count(for: fetchRequest)
@@ -66,8 +77,8 @@ extension Entity {
     }
     
     /// Save context
-    public func save() throws {
-        try CoreData.saveContext()
+    public func save(on context: NSManagedObjectContext = CoreData.managedContext) throws {
+        try context.save()
     }
     
     /// Create new entity
