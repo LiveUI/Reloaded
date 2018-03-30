@@ -119,6 +119,8 @@
 		15115D98206E1B4600BC08D3 /* QueryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryFilter.swift; sourceTree = "<group>"; };
 		15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryFilterGroup.swift; sourceTree = "<group>"; };
 		15115DA3206E1E5000BC08D3 /* QuerySort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySort.swift; sourceTree = "<group>"; };
+		15115DAF206E256800BC08D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		15115DB0206E256800BC08D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15B7586A206D30FD0080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B7586D206D30FD0080AB5E /* Reloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded.h; sourceTree = "<group>"; };
 		15B7586E206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,9 +243,19 @@
 			path = Sortting;
 			sourceTree = "<group>";
 		};
+		15115DAE206E255100BC08D3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				15115DB0206E256800BC08D3 /* README.md */,
+				15115DAF206E256800BC08D3 /* LICENSE */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		15B75860206D30FD0080AB5E = {
 			isa = PBXGroup;
 			children = (
+				15115DAE206E255100BC08D3 /* Other */,
 				15115D72206D853800BC08D3 /* Demo-iOS */,
 				15B75884206D316E0080AB5E /* Classes */,
 				15B7586C206D30FD0080AB5E /* Reloaded-macOS */,
