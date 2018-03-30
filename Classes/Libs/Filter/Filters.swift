@@ -9,54 +9,37 @@
 import Foundation
 
 
-/// Defines a `Filter` that can be added on fetch operations to limit the set of data affected.
-public struct QueryFilter {
-    
-    /// The field to filer.
-    public var field: QueryField
-    
-    /// The filter type.
-    public var type: QueryFilterType
-    
-    /// The filter value, possible another field.
-    public var value: QueryDataRepresentable
-    
-    /// Create a new filter.
-    public init(field: QueryField, type: QueryFilterType, value: QueryDataRepresentable) {
-        self.field = field
-        self.type = type
-        self.value = value
-    }
-    
-}
-
-
-extension QueryFilter {
-    
-    public func predicate() -> NSPredicate {
-        let predicate = NSPredicate(format: "\(field.name) == %@", value.value)
-        return predicate
-    }
-    
-}
-
-
 extension Query {
     
     /// Basic filter
-    @discardableResult public func filter(_ filter: QueryFilter ...) -> Self {
-        filters.append(contentsOf: filter)
+    @discardableResult public func filter(_ filters: QueryFilter ...) -> Self {
+        self.filters.append(.group(.and, filters))
+        return self
+    }
+    
+    /// Basic filter
+    @discardableResult public func filter(_ operator: QueryFilterGroup.Operator, _ filters: QueryFilter ...) -> Self {
+        self.filters.append(.group(`operator`, filters))
         return self
     }
     
 }
 
 /// field == value
-public func == (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func == (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
 }
-public func == (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func == (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
+}
+
+/// field == value, case insensitive
+infix operator ==*
+public func ==* (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+    return _compare(lhs, .equals, rhs, false)
+}
+public func ==* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+    return _compare(lhs, .equals, rhs, false)
 }
 
 /// field != value
@@ -65,6 +48,15 @@ public func != (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
 }
 public func != (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs)
+}
+
+/// field != value, case insensitive
+infix operator !=*
+public func !=* (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+    return _compare(lhs, .notEquals, rhs, false)
+}
+public func !=* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+    return _compare(lhs, .notEquals, rhs, false)
 }
 
 /// field > value
@@ -99,8 +91,8 @@ public func <= (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .lessThanOrEquals, rhs)
 }
 
-private func _compare(_ lhs: String, _ comparison: QueryFilterType, _ rhs: QueryDataRepresentable?) -> QueryFilter {
-    return QueryFilter(field: QueryField(name: lhs), type: comparison, value: rhs ?? NULL())
+private func _compare(_ lhs: String, _ comparison: QueryFilterType, _ rhs: QueryDataRepresentable?, _ caseSensitive: Bool = true) -> QueryFilter {
+    return QueryFilter(field: QueryField(name: lhs), type: comparison, value: rhs ?? NULL(), caseSensitive: caseSensitive)
 }
 
 

@@ -10,8 +10,15 @@ import Foundation
 
 
 public protocol QueryDataRepresentable {
-    var value: String { get }
+//    var value: String { get }
     var isNull: Bool { get }
+}
+
+
+public protocol NumericQueryDataRepresentable: QueryDataRepresentable { }
+public protocol StringQueryDataRepresentable: QueryDataRepresentable { }
+public protocol ExactQueryDataRepresentable: QueryDataRepresentable {
+    var value: String { get }
 }
 
 extension QueryDataRepresentable {
@@ -22,10 +29,10 @@ extension QueryDataRepresentable {
     
 }
 
-struct NULL: QueryDataRepresentable {
+struct NULL: ExactQueryDataRepresentable {
     
     var value: String {
-        return ""
+        return "NULL"
     }
     
     var isNull: Bool {
@@ -34,26 +41,7 @@ struct NULL: QueryDataRepresentable {
     
 }
 
-extension String: QueryDataRepresentable {
-    
-    public var value: String {
-        return self
-    }
-    
-}
-
-extension Int: QueryDataRepresentable {
-    
-    public var value: String {
-        return String(self)
-    }
-    
-}
-
-extension Bool: QueryDataRepresentable {
-    
-    public var value: String {
-        return String(self)
-    }
-    
-}
+extension String: StringQueryDataRepresentable { }
+extension Int: QueryDataRepresentable { }
+extension Int16: QueryDataRepresentable { }
+extension Bool: QueryDataRepresentable { }

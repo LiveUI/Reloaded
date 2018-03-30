@@ -9,25 +9,6 @@
 import Foundation
 
 
-/// Sorts results based on a field and direction.
-public struct QuerySort {
-    /// The field to sort.
-    public let field: QueryField
-    
-    /// The direction to sort by.
-    public let direction: ComparisonResult
-    
-    /// Create a new sort
-    public init(
-        field: QueryField,
-        direction: ComparisonResult
-        ) {
-        self.field = field
-        self.direction = direction
-    }
-}
-
-
 extension Query {
     
     /// Sort by

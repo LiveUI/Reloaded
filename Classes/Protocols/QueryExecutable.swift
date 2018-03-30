@@ -15,7 +15,7 @@ public protocol QueryExecutable {
     
     var entity: EntityType.Type { get }
     
-    var filters: [QueryFilter] { get set }
+    var filters: [QueryFilterGroup] { get set }
     var sorts: [QuerySort] { get set }
     var limit: Int? { get set }
     
@@ -29,12 +29,12 @@ extension QueryExecutable {
     /// Get compiled fetch request
     public func fetchRequest() -> Entity.Request {
         let fetch = Entity.Request(entityName: entity.entityName)
-        if !filters.isEmpty {
-            if filters.count == 1, let filter = filters.first {
-                fetch.predicate = filter.predicate()
-            } else {
-                
-            }
+        fetch.predicate = filters.asPredicate()
+        if !sorts.isEmpty {
+            fetch.sortDescriptors = sorts.asSortDescriptors()
+        }
+        if let limit = limit {
+            fetch.fetchLimit = limit
         }
         return fetch
     }

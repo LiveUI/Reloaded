@@ -15,6 +15,18 @@
 		15115D85206D886200BC08D3 /* Reloaded.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B758A4206D32B00080AB5E /* Reloaded.framework */; };
 		15115D88206D891B00BC08D3 /* Demo-iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15115D86206D891B00BC08D3 /* Demo-iOS.xcdatamodeld */; };
 		15115D97206D911300BC08D3 /* ReloadedTestsHoldingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15B75909206D34110080AB5E /* ReloadedTestsHoldingApp.xcdatamodeld */; };
+		15115D99206E1B4600BC08D3 /* QueryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D98206E1B4600BC08D3 /* QueryFilter.swift */; };
+		15115D9A206E1B4600BC08D3 /* QueryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D98206E1B4600BC08D3 /* QueryFilter.swift */; };
+		15115D9B206E1B4600BC08D3 /* QueryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D98206E1B4600BC08D3 /* QueryFilter.swift */; };
+		15115D9C206E1B4600BC08D3 /* QueryFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D98206E1B4600BC08D3 /* QueryFilter.swift */; };
+		15115D9E206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */; };
+		15115D9F206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */; };
+		15115DA0206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */; };
+		15115DA1206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */; };
+		15115DA4206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
+		15115DA5206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
+		15115DA6206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
+		15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
 		15B75874206D30FD0080AB5E /* Reloaded.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B7586A206D30FD0080AB5E /* Reloaded.framework */; };
 		15B75879206D30FD0080AB5E /* ReloadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75878206D30FD0080AB5E /* ReloadedTests.swift */; };
 		15B7587B206D30FD0080AB5E /* Reloaded.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B7586D206D30FD0080AB5E /* Reloaded.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +116,9 @@
 		15115D7D206D853900BC08D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15115D7F206D853900BC08D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15115D87206D891B00BC08D3 /* Demo-iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Demo-iOS.xcdatamodel"; sourceTree = "<group>"; };
+		15115D98206E1B4600BC08D3 /* QueryFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryFilter.swift; sourceTree = "<group>"; };
+		15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryFilterGroup.swift; sourceTree = "<group>"; };
+		15115DA3206E1E5000BC08D3 /* QuerySort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySort.swift; sourceTree = "<group>"; };
 		15B7586A206D30FD0080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B7586D206D30FD0080AB5E /* Reloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded.h; sourceTree = "<group>"; };
 		15B7586E206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,6 +232,15 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		15115DA2206E1E2F00BC08D3 /* Sortting */ = {
+			isa = PBXGroup;
+			children = (
+				15B75889206D316E0080AB5E /* Sorting.swift */,
+				15115DA3206E1E5000BC08D3 /* QuerySort.swift */,
+			);
+			path = Sortting;
+			sourceTree = "<group>";
+		};
 		15B75860206D30FD0080AB5E = {
 			isa = PBXGroup;
 			children = (
@@ -289,9 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				15B75888206D316E0080AB5E /* Query.swift */,
-				15B75889206D316E0080AB5E /* Sorting.swift */,
 				15B7588A206D316E0080AB5E /* QueryField.swift */,
 				15B7588B206D316E0080AB5E /* Filter */,
+				15115DA2206E1E2F00BC08D3 /* Sortting */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -302,6 +326,8 @@
 				15B7588C206D316E0080AB5E /* QueryFilterValue.swift */,
 				15B7588D206D316E0080AB5E /* QueryFilterType.swift */,
 				15B7588E206D316E0080AB5E /* Filters.swift */,
+				15115D98206E1B4600BC08D3 /* QueryFilter.swift */,
+				15115D9D206E1B8200BC08D3 /* QueryFilterGroup.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -665,11 +691,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15115D99206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B7589A206D316E0080AB5E /* Filters.swift in Sources */,
+				15115DA4206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B75896206D316E0080AB5E /* Sorting.swift in Sources */,
 				15B75897206D316E0080AB5E /* QueryField.swift in Sources */,
 				15B75899206D316E0080AB5E /* QueryFilterType.swift in Sources */,
 				15B7589B206D316E0080AB5E /* CoreData.swift in Sources */,
+				15115D9E206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B7589E206D316E0080AB5E /* QueryDataRepresentable.swift in Sources */,
 				15B7589C206D316E0080AB5E /* Entity.swift in Sources */,
 				15B75895206D316E0080AB5E /* Query.swift in Sources */,
@@ -692,11 +721,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15115D9A206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B758DD206D330D0080AB5E /* Filters.swift in Sources */,
+				15115DA5206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758D9206D330D0080AB5E /* Sorting.swift in Sources */,
 				15B758DA206D330D0080AB5E /* QueryField.swift in Sources */,
 				15B758DC206D330D0080AB5E /* QueryFilterType.swift in Sources */,
 				15B758DE206D330D0080AB5E /* CoreData.swift in Sources */,
+				15115D9F206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B758E1206D330D0080AB5E /* QueryDataRepresentable.swift in Sources */,
 				15B758DF206D330D0080AB5E /* Entity.swift in Sources */,
 				15B758D8206D330D0080AB5E /* Query.swift in Sources */,
@@ -710,11 +742,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15115D9B206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B758E8206D330E0080AB5E /* Filters.swift in Sources */,
+				15115DA6206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758E4206D330E0080AB5E /* Sorting.swift in Sources */,
 				15B758E5206D330E0080AB5E /* QueryField.swift in Sources */,
 				15B758E7206D330E0080AB5E /* QueryFilterType.swift in Sources */,
 				15B758E9206D330E0080AB5E /* CoreData.swift in Sources */,
+				15115DA0206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B758EC206D330E0080AB5E /* QueryDataRepresentable.swift in Sources */,
 				15B758EA206D330E0080AB5E /* Entity.swift in Sources */,
 				15B758E3206D330E0080AB5E /* Query.swift in Sources */,
@@ -728,11 +763,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15115D9C206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B75900206D33720080AB5E /* Filters.swift in Sources */,
+				15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758FC206D33720080AB5E /* Sorting.swift in Sources */,
 				15B758FD206D33720080AB5E /* QueryField.swift in Sources */,
 				15B758FF206D33720080AB5E /* QueryFilterType.swift in Sources */,
 				15B75901206D33720080AB5E /* CoreData.swift in Sources */,
+				15115DA1206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B75904206D33720080AB5E /* QueryDataRepresentable.swift in Sources */,
 				15B75902206D33720080AB5E /* Entity.swift in Sources */,
 				15B758FB206D33720080AB5E /* Query.swift in Sources */,
