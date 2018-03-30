@@ -38,7 +38,7 @@ public class CoreData {
     
     /// Managed context for this instance
     public var managedContext: NSManagedObjectContext {
-        return CoreData.default.persistentContainer.viewContext
+        return persistentContainer.viewContext
     }
     
     /// Default managed context

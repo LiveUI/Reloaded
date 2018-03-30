@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         loco.hasChimney = true
         try! loco.save()
         
-        let all = try! Locomotive.query.filter("color" == "black").sort(by: "color", direction: .orderedDescending).all()
+        let all = try! Locomotive.query.filter("hasChimney" == true).sort(by: "color", direction: .orderedDescending).all()
         print(all)
     }
 

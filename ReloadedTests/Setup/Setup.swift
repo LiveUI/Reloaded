@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Reloaded
-@testable import ReloadedTestHoldingApp
+@testable import ReloadedTestsHoldingApp
+import ReloadedTestTools
 
 
 extension Snowman: Entity { }
@@ -17,7 +17,7 @@ extension Snowman: Entity { }
 class Setup {
     
     static func `do`() {
-        _ = CoreData.default
+        CoreData.default.mock(forBundleWithClass: AppDelegate.self)
         
         var lastCarrot = true
         for i: Int in 0...50 {

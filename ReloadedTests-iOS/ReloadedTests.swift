@@ -1,16 +1,17 @@
 //
 //  ReloadedTests.swift
-//  ReloadedTests
+//  ReloadedTests-iOS
 //
-//  Created by Ondrej Rafaj on 29/03/2018.
+//  Created by Ondrej Rafaj on 30/03/2018.
 //  Copyright © 2018 LiveUI. All rights reserved.
 //
 
 import XCTest
+@testable import Demo_iOS
 import ReloadedTestTools
 
 
-class ReloadedTests: XCTestCase {
+class ReloadedTests2: XCTestCase {
     
     override func setUp() {
         super.setUp()

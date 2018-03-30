@@ -41,7 +41,15 @@ struct NULL: ExactQueryDataRepresentable {
     
 }
 
+struct Bool: ExactQueryDataRepresentable {
+    
+    var value: String {
+        return self ? "true" : "false"
+    }
+    
+}
+
 extension String: StringQueryDataRepresentable { }
-extension Int: QueryDataRepresentable { }
-extension Int16: QueryDataRepresentable { }
-extension Bool: QueryDataRepresentable { }
+extension Int: NumericQueryDataRepresentable { }
+extension Int16: NumericQueryDataRepresentable { }
+extension Bool: NumericQueryDataRepresentable { }
