@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15115DCB206E58A600BC08D3"
-               BuildableName = "ReloadedTestTools_iOS.framework"
+               BuildableName = "ReloadedTestTools.framework"
                BlueprintName = "ReloadedTestTools-iOS"
                ReferencedContainer = "container:Reloaded.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15115DCB206E58A600BC08D3"
-            BuildableName = "ReloadedTestTools_iOS.framework"
+            BuildableName = "ReloadedTestTools.framework"
             BlueprintName = "ReloadedTestTools-iOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15115DCB206E58A600BC08D3"
-            BuildableName = "ReloadedTestTools_iOS.framework"
+            BuildableName = "ReloadedTestTools.framework"
             BlueprintName = "ReloadedTestTools-iOS"
             ReferencedContainer = "container:Reloaded.xcodeproj">
          </BuildableReference>

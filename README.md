@@ -1,4 +1,4 @@
-![Boost: Enterprise AppStore in Swift](https://github.com/LiveUI/Reloaded/raw/master/A8409E8D-4943-4E97-8C1A-02756A2DF515.jpeg)
+![Boost: Enterprise AppStore in Swift](https://github.com/LiveUI/Reloaded/raw/master/Other/logo.jpeg)
 
 # CoreData - Reloaded
 
