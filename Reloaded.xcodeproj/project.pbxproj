@@ -29,13 +29,13 @@
 		15115DBA206E540F00BC08D3 /* ReloadedTestTools_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15115DB8206E540F00BC08D3 /* ReloadedTestTools_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15115DC1206E548700BC08D3 /* CoreData+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DC0206E548700BC08D3 /* CoreData+Tests.swift */; };
 		15115DD0206E58A600BC08D3 /* ReloadedTestTools_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15115DCE206E58A600BC08D3 /* ReloadedTestTools_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15115DD6206E58D700BC08D3 /* Reloaded.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B758A4206D32B00080AB5E /* Reloaded.framework */; };
 		15115DDF206E592A00BC08D3 /* ReloadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DDE206E592A00BC08D3 /* ReloadedTests.swift */; };
 		15115DE8206E5A1100BC08D3 /* ReloadedTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15115DCC206E58A600BC08D3 /* ReloadedTestTools.framework */; };
 		15115DE9206E5A5A00BC08D3 /* CoreData+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DC0206E548700BC08D3 /* CoreData+Tests.swift */; };
 		15115DEC206E5AA600BC08D3 /* Reloaded.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B7586A206D30FD0080AB5E /* Reloaded.framework */; };
 		15115DED206E5AF400BC08D3 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75910206D36460080AB5E /* Setup.swift */; };
 		15115DEE206E5AFC00BC08D3 /* ReloadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75878206D30FD0080AB5E /* ReloadedTests.swift */; };
+		151164FA206F8B1600BC08D3 /* Reloaded.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B758A4206D32B00080AB5E /* Reloaded.framework */; };
 		15B7587B206D30FD0080AB5E /* Reloaded.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B7586D206D30FD0080AB5E /* Reloaded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B75894206D316E0080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
 		15B75895206D316E0080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
@@ -148,6 +148,7 @@
 		15115DDC206E592A00BC08D3 /* ReloadedTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReloadedTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15115DDE206E592A00BC08D3 /* ReloadedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadedTests.swift; sourceTree = "<group>"; };
 		15115DE0206E592B00BC08D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15116A662070236100BC08D3 /* Reloaded.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Reloaded.podspec; sourceTree = "<group>"; };
 		15B7586A206D30FD0080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B7586D206D30FD0080AB5E /* Reloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded.h; sourceTree = "<group>"; };
 		15B7586E206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15115DD6206E58D700BC08D3 /* Reloaded.framework in Frameworks */,
+				151164FA206F8B1600BC08D3 /* Reloaded.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +275,7 @@
 		15115DAE206E255100BC08D3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				15116A662070236100BC08D3 /* Reloaded.podspec */,
 				15115DB0206E256800BC08D3 /* README.md */,
 				15115DAF206E256800BC08D3 /* LICENSE */,
 			);

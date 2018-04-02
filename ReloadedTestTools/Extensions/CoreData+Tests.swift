@@ -9,6 +9,7 @@
 import Foundation
 @_exported @testable import Reloaded
 
+
 extension CoreData {
     
     public func mock(forBundleWithClass c: AnyClass) {
