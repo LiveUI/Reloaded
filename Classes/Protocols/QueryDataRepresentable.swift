@@ -10,7 +10,6 @@ import Foundation
 
 
 public protocol QueryDataRepresentable {
-//    var value: String { get }
     var isNull: Bool { get }
 }
 
@@ -49,7 +48,13 @@ extension Bool: ExactQueryDataRepresentable {
     
 }
 
+extension Date: QueryDataRepresentable { }
 extension String: StringQueryDataRepresentable { }
+extension Decimal: NumericQueryDataRepresentable { }
+extension Double: NumericQueryDataRepresentable { }
+extension Float: NumericQueryDataRepresentable { }
 extension Int: NumericQueryDataRepresentable { }
 extension Int16: NumericQueryDataRepresentable { }
+extension Int32: NumericQueryDataRepresentable { }
+extension Int64: NumericQueryDataRepresentable { }
 extension Bool: NumericQueryDataRepresentable { }

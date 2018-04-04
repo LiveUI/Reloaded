@@ -13,6 +13,9 @@ public struct QueryFilterType: Equatable {
     
     enum Storage: Equatable {
         case equals
+        case contains
+        case beginsWith
+        case endsWith
         case notEquals
         case greaterThan
         case lessThan
@@ -25,6 +28,12 @@ public struct QueryFilterType: Equatable {
         switch storage {
         case .equals:
             return "=="
+        case .contains:
+            return "CONTAINS"
+        case .beginsWith:
+            return "BEGINSWITH"
+        case .endsWith:
+            return "ENDSWITH"
         case .notEquals:
             return "!="
         case .greaterThan:
@@ -45,6 +54,12 @@ public struct QueryFilterType: Equatable {
     
     /// ==
     public static var equals: QueryFilterType { return .init(storage: .equals) }
+    /// CONTAINS
+    public static var contains: QueryFilterType { return .init(storage: .contains) }
+    /// BEGINSWITH
+    public static var beginsWith: QueryFilterType { return .init(storage: .beginsWith) }
+    /// ENDSWITH
+    public static var endsWith: QueryFilterType { return .init(storage: .endsWith) }
     /// !=
     public static var notEquals: QueryFilterType { return .init(storage: .notEquals) }
     /// >

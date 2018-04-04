@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreData
+@_exported import CoreData
 
 /// Type erased Entity
 public protocol AnyEntity: class {

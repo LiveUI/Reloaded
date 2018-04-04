@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             hasChimney = !hasChimney
         }
         
-        let all = try! Locomotive.query.filter("hasChimney" == true).filter(.or, "color" == "green", "color" == "black").sort(by: "color", direction: .orderedDescending).all()
+        let all = try! Locomotive.query.filter("hasChimney" == true).filter(.or, "color" == "green", "color" == "black").sort(by: "color", direction: .orderedAscending).all()
         all.forEach { loco in
             print("Color: \(loco.color ?? "Unknown"); Chimney: \(Bool(loco.hasChimney))")
         }

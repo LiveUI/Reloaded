@@ -42,6 +42,18 @@ public func ==* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter
     return _compare(lhs, .equals, rhs, false)
 }
 
+/// field CONTAINS value
+infix operator ~~
+public func ~~ (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+    return _compare(lhs, .contains, rhs)
+}
+
+/// field CONTAINS value, case insensitive
+infix operator ~~*
+public func ~~* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+    return _compare(lhs, .contains, rhs, false)
+}
+
 /// field != value
 public func != (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs)
@@ -89,6 +101,14 @@ public func <= (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
 }
 public func <= (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .lessThanOrEquals, rhs)
+}
+
+extension QueryFilter {
+
+    public static func custom(_ lhs: String, _ comparison: QueryFilterType, _ rhs: QueryDataRepresentable?, caseSensitive: Bool = true) -> QueryFilter {
+        return _compare(lhs, comparison, rhs, caseSensitive)
+    }
+    
 }
 
 private func _compare(_ lhs: String, _ comparison: QueryFilterType, _ rhs: QueryDataRepresentable?, _ caseSensitive: Bool = true) -> QueryFilter {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreData
+@_exported import CoreData
 
 
 public protocol QueryExecutable {
@@ -38,6 +38,10 @@ extension QueryExecutable {
         }
         return fetch
     }
+
+}
+
+extension QueryExecutable where EntityType: NSManagedObject {
     
     public func all(on context: NSManagedObjectContext = CoreData.managedContext) throws -> [EntityType] {
         guard let data = try context.fetch(fetchRequest()) as? [EntityType] else {
@@ -47,12 +51,19 @@ extension QueryExecutable {
     }
     
     public func delete(on context: NSManagedObjectContext = CoreData.managedContext) throws {
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest())
-        
-        guard let persistentStoreCoordinator = context.persistentStoreCoordinator else {
-            throw CoreData.Problem.invalidPersistentStoreCoordinator
+        for object in try all(on: context) {
+            try object.delete(on: context)
         }
-        try persistentStoreCoordinator.execute(deleteRequest, with: context)
+        try context.save()
+        
+//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest())
+//        do {
+//            let batchDeleteResult = try context.execute(deleteRequest) as! NSBatchDeleteResult
+//            print("The batch delete request has deleted \(batchDeleteResult.result!) records.")
+//        } catch {
+//            let updateError = error as NSError
+//            print("\(updateError), \(updateError.userInfo)")
+//        }
     }
     
     public func count(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Int {

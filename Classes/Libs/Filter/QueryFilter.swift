@@ -39,7 +39,7 @@ extension QueryFilter {
     
     public func asPredicate() -> NSPredicate {
         if let value = value as? String {
-            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation)\(caseSensitive ? "[c]" : "") %@", value)
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation)\(caseSensitive ? "" : "[c]") %@", value)
             return predicate
         } else if let value = value as? Bool {
             let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) %@", NSNumber(booleanLiteral: value))

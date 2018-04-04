@@ -32,11 +32,3 @@ public struct QueryField: Hashable {
     }
     
 }
-
-extension KeyPath where Root: Entity {
-    
-    public func makeQueryField() throws -> QueryField {
-        return QueryField(name: String(format: "%K", Value.self as! CVarArg))
-    }
-    
-}
