@@ -1,5 +1,5 @@
 //
-//  Query.swift
+//  CoreDataQuery.swift
 //  Reloaded
 //
 //  Created by Ondrej Rafaj on 29/03/2018.
@@ -10,7 +10,7 @@ import Foundation
 
 
 /// Root query available for each NSManagedObject conforming to Entity
-public class Query<QueryEntityType>: QueryExecutable where QueryEntityType: Entity {    
+public class CoreDataQuery<QueryEntityType>: CoreDataExecutable where QueryEntityType: Entity {
     
     /// Name of the entity this query will be executed on
     public var entity: QueryEntityType.Type

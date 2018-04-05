@@ -28,9 +28,21 @@
 		15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
 		15115DED206E5AF400BC08D3 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75910206D36460080AB5E /* Setup.swift */; };
 		15115DEE206E5AFC00BC08D3 /* ReloadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75878206D30FD0080AB5E /* ReloadedTests.swift */; };
+		15116D7120764E0300BC08D3 /* ArrayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7020764E0300BC08D3 /* ArrayQuery.swift */; };
+		15116D7220764E0300BC08D3 /* ArrayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7020764E0300BC08D3 /* ArrayQuery.swift */; };
+		15116D7320764E0300BC08D3 /* ArrayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7020764E0300BC08D3 /* ArrayQuery.swift */; };
+		15116D7420764E0300BC08D3 /* ArrayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7020764E0300BC08D3 /* ArrayQuery.swift */; };
+		15116D7620764E4C00BC08D3 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7520764E4C00BC08D3 /* Queryable.swift */; };
+		15116D7720764E4C00BC08D3 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7520764E4C00BC08D3 /* Queryable.swift */; };
+		15116D7820764E4C00BC08D3 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7520764E4C00BC08D3 /* Queryable.swift */; };
+		15116D7920764E4C00BC08D3 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7520764E4C00BC08D3 /* Queryable.swift */; };
+		15116D7B207655A600BC08D3 /* ArrayExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7A207655A600BC08D3 /* ArrayExecutable.swift */; };
+		15116D7C207655A600BC08D3 /* ArrayExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7A207655A600BC08D3 /* ArrayExecutable.swift */; };
+		15116D7D207655A600BC08D3 /* ArrayExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7A207655A600BC08D3 /* ArrayExecutable.swift */; };
+		15116D7E207655A600BC08D3 /* ArrayExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15116D7A207655A600BC08D3 /* ArrayExecutable.swift */; };
 		15B7587B206D30FD0080AB5E /* Reloaded.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B7586D206D30FD0080AB5E /* Reloaded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B75894206D316E0080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
-		15B75895206D316E0080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
+		15B75895206D316E0080AB5E /* CoreDataQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* CoreDataQuery.swift */; };
 		15B75896206D316E0080AB5E /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75889206D316E0080AB5E /* Sorting.swift */; };
 		15B75897206D316E0080AB5E /* QueryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588A206D316E0080AB5E /* QueryField.swift */; };
 		15B75898206D316E0080AB5E /* QueryFilterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588C206D316E0080AB5E /* QueryFilterValue.swift */; };
@@ -38,12 +50,12 @@
 		15B7589A206D316E0080AB5E /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588E206D316E0080AB5E /* Filters.swift */; };
 		15B7589B206D316E0080AB5E /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588F206D316E0080AB5E /* CoreData.swift */; };
 		15B7589C206D316E0080AB5E /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75891206D316E0080AB5E /* Entity.swift */; };
-		15B7589D206D316E0080AB5E /* QueryExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* QueryExecutable.swift */; };
+		15B7589D206D316E0080AB5E /* CoreDataExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* CoreDataExecutable.swift */; };
 		15B7589E206D316E0080AB5E /* QueryDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */; };
 		15B758B4206D32B10080AB5E /* Reloaded_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B758A6206D32B00080AB5E /* Reloaded_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B758D0206D32E50080AB5E /* Reloaded_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B758C2206D32E50080AB5E /* Reloaded_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B758D7206D330D0080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
-		15B758D8206D330D0080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
+		15B758D8206D330D0080AB5E /* CoreDataQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* CoreDataQuery.swift */; };
 		15B758D9206D330D0080AB5E /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75889206D316E0080AB5E /* Sorting.swift */; };
 		15B758DA206D330D0080AB5E /* QueryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588A206D316E0080AB5E /* QueryField.swift */; };
 		15B758DB206D330D0080AB5E /* QueryFilterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588C206D316E0080AB5E /* QueryFilterValue.swift */; };
@@ -51,10 +63,10 @@
 		15B758DD206D330D0080AB5E /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588E206D316E0080AB5E /* Filters.swift */; };
 		15B758DE206D330D0080AB5E /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588F206D316E0080AB5E /* CoreData.swift */; };
 		15B758DF206D330D0080AB5E /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75891206D316E0080AB5E /* Entity.swift */; };
-		15B758E0206D330D0080AB5E /* QueryExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* QueryExecutable.swift */; };
+		15B758E0206D330D0080AB5E /* CoreDataExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* CoreDataExecutable.swift */; };
 		15B758E1206D330D0080AB5E /* QueryDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */; };
 		15B758E2206D330E0080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
-		15B758E3206D330E0080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
+		15B758E3206D330E0080AB5E /* CoreDataQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* CoreDataQuery.swift */; };
 		15B758E4206D330E0080AB5E /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75889206D316E0080AB5E /* Sorting.swift */; };
 		15B758E5206D330E0080AB5E /* QueryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588A206D316E0080AB5E /* QueryField.swift */; };
 		15B758E6206D330E0080AB5E /* QueryFilterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588C206D316E0080AB5E /* QueryFilterValue.swift */; };
@@ -62,11 +74,11 @@
 		15B758E8206D330E0080AB5E /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588E206D316E0080AB5E /* Filters.swift */; };
 		15B758E9206D330E0080AB5E /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588F206D316E0080AB5E /* CoreData.swift */; };
 		15B758EA206D330E0080AB5E /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75891206D316E0080AB5E /* Entity.swift */; };
-		15B758EB206D330E0080AB5E /* QueryExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* QueryExecutable.swift */; };
+		15B758EB206D330E0080AB5E /* CoreDataExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* CoreDataExecutable.swift */; };
 		15B758EC206D330E0080AB5E /* QueryDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */; };
 		15B758F6206D335D0080AB5E /* Reloaded_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B758F4206D335D0080AB5E /* Reloaded_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B758FA206D33720080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
-		15B758FB206D33720080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
+		15B758FB206D33720080AB5E /* CoreDataQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* CoreDataQuery.swift */; };
 		15B758FC206D33720080AB5E /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75889206D316E0080AB5E /* Sorting.swift */; };
 		15B758FD206D33720080AB5E /* QueryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588A206D316E0080AB5E /* QueryField.swift */; };
 		15B758FE206D33720080AB5E /* QueryFilterValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588C206D316E0080AB5E /* QueryFilterValue.swift */; };
@@ -74,7 +86,7 @@
 		15B75900206D33720080AB5E /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588E206D316E0080AB5E /* Filters.swift */; };
 		15B75901206D33720080AB5E /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B7588F206D316E0080AB5E /* CoreData.swift */; };
 		15B75902206D33720080AB5E /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75891206D316E0080AB5E /* Entity.swift */; };
-		15B75903206D33720080AB5E /* QueryExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* QueryExecutable.swift */; };
+		15B75903206D33720080AB5E /* CoreDataExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75892206D316E0080AB5E /* CoreDataExecutable.swift */; };
 		15B75904206D33720080AB5E /* QueryDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,17 +121,19 @@
 		15115DA3206E1E5000BC08D3 /* QuerySort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySort.swift; sourceTree = "<group>"; };
 		15115DAF206E256800BC08D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		15115DB0206E256800BC08D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		15115DC0206E548700BC08D3 /* CoreData+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Tests.swift"; sourceTree = "<group>"; };
 		15115DDC206E592A00BC08D3 /* ReloadedTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReloadedTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15115DE0206E592B00BC08D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15116A662070236100BC08D3 /* Reloaded.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Reloaded.podspec; sourceTree = "<group>"; };
+		15116D7020764E0300BC08D3 /* ArrayQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayQuery.swift; sourceTree = "<group>"; };
+		15116D7520764E4C00BC08D3 /* Queryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queryable.swift; sourceTree = "<group>"; };
+		15116D7A207655A600BC08D3 /* ArrayExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExecutable.swift; sourceTree = "<group>"; };
 		15B7586A206D30FD0080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B7586D206D30FD0080AB5E /* Reloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded.h; sourceTree = "<group>"; };
 		15B7586E206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B75878206D30FD0080AB5E /* ReloadedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadedTests.swift; sourceTree = "<group>"; };
 		15B7587A206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B75886206D316E0080AB5E /* Array+NSPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+NSPredicate.swift"; sourceTree = "<group>"; };
-		15B75888206D316E0080AB5E /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		15B75888206D316E0080AB5E /* CoreDataQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataQuery.swift; sourceTree = "<group>"; };
 		15B75889206D316E0080AB5E /* Sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		15B7588A206D316E0080AB5E /* QueryField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryField.swift; sourceTree = "<group>"; };
 		15B7588C206D316E0080AB5E /* QueryFilterValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryFilterValue.swift; sourceTree = "<group>"; };
@@ -127,7 +141,7 @@
 		15B7588E206D316E0080AB5E /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		15B7588F206D316E0080AB5E /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		15B75891206D316E0080AB5E /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		15B75892206D316E0080AB5E /* QueryExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryExecutable.swift; sourceTree = "<group>"; };
+		15B75892206D316E0080AB5E /* CoreDataExecutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataExecutable.swift; sourceTree = "<group>"; };
 		15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDataRepresentable.swift; sourceTree = "<group>"; };
 		15B758A4206D32B00080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B758A6206D32B00080AB5E /* Reloaded_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded_iOS.h; sourceTree = "<group>"; };
@@ -229,22 +243,6 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
-		15115DBE206E543400BC08D3 /* ReloadedTestTools */ = {
-			isa = PBXGroup;
-			children = (
-				15115DBF206E545D00BC08D3 /* Extensions */,
-			);
-			path = ReloadedTestTools;
-			sourceTree = "<group>";
-		};
-		15115DBF206E545D00BC08D3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				15115DC0206E548700BC08D3 /* CoreData+Tests.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		15115DC4206E564500BC08D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +264,6 @@
 				15115DAE206E255100BC08D3 /* Other */,
 				15115D72206D853800BC08D3 /* Demo-iOS */,
 				15B75884206D316E0080AB5E /* Classes */,
-				15115DBE206E543400BC08D3 /* ReloadedTestTools */,
 				15B7586C206D30FD0080AB5E /* Reloaded-macOS */,
 				15B758A5206D32B00080AB5E /* Reloaded-iOS */,
 				15B758C1206D32E50080AB5E /* Reloaded-tvOS */,
@@ -333,7 +330,8 @@
 		15B75887206D316E0080AB5E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				15B75888206D316E0080AB5E /* Query.swift */,
+				15116D7020764E0300BC08D3 /* ArrayQuery.swift */,
+				15B75888206D316E0080AB5E /* CoreDataQuery.swift */,
 				15B7588A206D316E0080AB5E /* QueryField.swift */,
 				15B7588B206D316E0080AB5E /* Filter */,
 				15115DA2206E1E2F00BC08D3 /* Sorting */,
@@ -357,8 +355,10 @@
 			isa = PBXGroup;
 			children = (
 				15B75891206D316E0080AB5E /* Entity.swift */,
-				15B75892206D316E0080AB5E /* QueryExecutable.swift */,
+				15116D7A207655A600BC08D3 /* ArrayExecutable.swift */,
+				15B75892206D316E0080AB5E /* CoreDataExecutable.swift */,
 				15B75893206D316E0080AB5E /* QueryDataRepresentable.swift */,
+				15116D7520764E4C00BC08D3 /* Queryable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -681,15 +681,18 @@
 				15B7589A206D316E0080AB5E /* Filters.swift in Sources */,
 				15115DA4206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B75896206D316E0080AB5E /* Sorting.swift in Sources */,
+				15116D7620764E4C00BC08D3 /* Queryable.swift in Sources */,
 				15B75897206D316E0080AB5E /* QueryField.swift in Sources */,
 				15B75899206D316E0080AB5E /* QueryFilterType.swift in Sources */,
+				15116D7120764E0300BC08D3 /* ArrayQuery.swift in Sources */,
 				15B7589B206D316E0080AB5E /* CoreData.swift in Sources */,
 				15115D9E206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B7589E206D316E0080AB5E /* QueryDataRepresentable.swift in Sources */,
+				15116D7B207655A600BC08D3 /* ArrayExecutable.swift in Sources */,
 				15B7589C206D316E0080AB5E /* Entity.swift in Sources */,
-				15B75895206D316E0080AB5E /* Query.swift in Sources */,
+				15B75895206D316E0080AB5E /* CoreDataQuery.swift in Sources */,
 				15B75894206D316E0080AB5E /* Array+NSPredicate.swift in Sources */,
-				15B7589D206D316E0080AB5E /* QueryExecutable.swift in Sources */,
+				15B7589D206D316E0080AB5E /* CoreDataExecutable.swift in Sources */,
 				15B75898206D316E0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,15 +705,18 @@
 				15B758DD206D330D0080AB5E /* Filters.swift in Sources */,
 				15115DA5206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758D9206D330D0080AB5E /* Sorting.swift in Sources */,
+				15116D7720764E4C00BC08D3 /* Queryable.swift in Sources */,
 				15B758DA206D330D0080AB5E /* QueryField.swift in Sources */,
 				15B758DC206D330D0080AB5E /* QueryFilterType.swift in Sources */,
+				15116D7220764E0300BC08D3 /* ArrayQuery.swift in Sources */,
 				15B758DE206D330D0080AB5E /* CoreData.swift in Sources */,
 				15115D9F206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B758E1206D330D0080AB5E /* QueryDataRepresentable.swift in Sources */,
+				15116D7C207655A600BC08D3 /* ArrayExecutable.swift in Sources */,
 				15B758DF206D330D0080AB5E /* Entity.swift in Sources */,
-				15B758D8206D330D0080AB5E /* Query.swift in Sources */,
+				15B758D8206D330D0080AB5E /* CoreDataQuery.swift in Sources */,
 				15B758D7206D330D0080AB5E /* Array+NSPredicate.swift in Sources */,
-				15B758E0206D330D0080AB5E /* QueryExecutable.swift in Sources */,
+				15B758E0206D330D0080AB5E /* CoreDataExecutable.swift in Sources */,
 				15B758DB206D330D0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,15 +729,18 @@
 				15B758E8206D330E0080AB5E /* Filters.swift in Sources */,
 				15115DA6206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758E4206D330E0080AB5E /* Sorting.swift in Sources */,
+				15116D7820764E4C00BC08D3 /* Queryable.swift in Sources */,
 				15B758E5206D330E0080AB5E /* QueryField.swift in Sources */,
 				15B758E7206D330E0080AB5E /* QueryFilterType.swift in Sources */,
+				15116D7320764E0300BC08D3 /* ArrayQuery.swift in Sources */,
 				15B758E9206D330E0080AB5E /* CoreData.swift in Sources */,
 				15115DA0206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B758EC206D330E0080AB5E /* QueryDataRepresentable.swift in Sources */,
+				15116D7D207655A600BC08D3 /* ArrayExecutable.swift in Sources */,
 				15B758EA206D330E0080AB5E /* Entity.swift in Sources */,
-				15B758E3206D330E0080AB5E /* Query.swift in Sources */,
+				15B758E3206D330E0080AB5E /* CoreDataQuery.swift in Sources */,
 				15B758E2206D330E0080AB5E /* Array+NSPredicate.swift in Sources */,
-				15B758EB206D330E0080AB5E /* QueryExecutable.swift in Sources */,
+				15B758EB206D330E0080AB5E /* CoreDataExecutable.swift in Sources */,
 				15B758E6206D330E0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,15 +753,18 @@
 				15B75900206D33720080AB5E /* Filters.swift in Sources */,
 				15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */,
 				15B758FC206D33720080AB5E /* Sorting.swift in Sources */,
+				15116D7920764E4C00BC08D3 /* Queryable.swift in Sources */,
 				15B758FD206D33720080AB5E /* QueryField.swift in Sources */,
 				15B758FF206D33720080AB5E /* QueryFilterType.swift in Sources */,
+				15116D7420764E0300BC08D3 /* ArrayQuery.swift in Sources */,
 				15B75901206D33720080AB5E /* CoreData.swift in Sources */,
 				15115DA1206E1B8200BC08D3 /* QueryFilterGroup.swift in Sources */,
 				15B75904206D33720080AB5E /* QueryDataRepresentable.swift in Sources */,
+				15116D7E207655A600BC08D3 /* ArrayExecutable.swift in Sources */,
 				15B75902206D33720080AB5E /* Entity.swift in Sources */,
-				15B758FB206D33720080AB5E /* Query.swift in Sources */,
+				15B758FB206D33720080AB5E /* CoreDataQuery.swift in Sources */,
 				15B758FA206D33720080AB5E /* Array+NSPredicate.swift in Sources */,
-				15B75903206D33720080AB5E /* QueryExecutable.swift in Sources */,
+				15B75903206D33720080AB5E /* CoreDataExecutable.swift in Sources */,
 				15B758FE206D33720080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  QueryExecutable.swift
+//  CoreDataExecutable.swift
 //  Reloaded
 //
 //  Created by Ondrej Rafaj on 29/03/2018.
@@ -10,21 +10,18 @@ import Foundation
 @_exported import CoreData
 
 
-public protocol QueryExecutable {
+/// Define interface for query builder
+public protocol CoreDataExecutable: Queryable {
     associatedtype EntityType: Entity
     
     var entity: EntityType.Type { get }
-    
-    var filters: [QueryFilterGroup] { get set }
-    var sorts: [QuerySort] { get set }
-    var limit: Int? { get set }
     
     init(_ entityType: EntityType.Type)
     func fetchRequest() -> Entity.Request
 }
 
 
-extension QueryExecutable {
+extension CoreDataExecutable {
     
     /// Get compiled fetch request
     public func fetchRequest() -> Entity.Request {
@@ -41,8 +38,9 @@ extension QueryExecutable {
 
 }
 
-extension QueryExecutable where EntityType: NSManagedObject {
+extension CoreDataExecutable where EntityType: NSManagedObject {
     
+    /// Return all items for generated fetch request
     public func all(on context: NSManagedObjectContext = CoreData.managedContext) throws -> [EntityType] {
         guard let data = try context.fetch(fetchRequest()) as? [EntityType] else {
             return []
@@ -50,26 +48,20 @@ extension QueryExecutable where EntityType: NSManagedObject {
         return data
     }
     
+    /// Delete all items for generated fetch request
     public func delete(on context: NSManagedObjectContext = CoreData.managedContext) throws {
         for object in try all(on: context) {
             try object.delete(on: context)
         }
         try context.save()
-        
-//        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest())
-//        do {
-//            let batchDeleteResult = try context.execute(deleteRequest) as! NSBatchDeleteResult
-//            print("The batch delete request has deleted \(batchDeleteResult.result!) records.")
-//        } catch {
-//            let updateError = error as NSError
-//            print("\(updateError), \(updateError.userInfo)")
-//        }
     }
     
+    /// Return count for generated fetch request
     public func count(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Int {
         return try context.count(for: fetchRequest())
     }
     
+    /// Return first item from a generated fetch request
     public func first(on context: NSManagedObjectContext = CoreData.managedContext) throws -> EntityType? {
         return try context.fetch(fetchRequest()).first as? EntityType
     }

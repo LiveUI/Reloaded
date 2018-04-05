@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Query {
+extension CoreDataQuery {
     
     /// Sort by
     @discardableResult public func sort(sort: QuerySort) -> Self {

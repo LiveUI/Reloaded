@@ -13,6 +13,17 @@ import Reloaded
 extension Locomotive: Entity { }
 
 
+class Object {
+    let bbbb: String
+    let cccc: Int
+    
+    init(bbbb: String, cccc: Int) {
+        self.bbbb = bbbb
+        self.cccc = cccc
+    }
+}
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -34,6 +45,12 @@ class ViewController: UIViewController {
         all.forEach { loco in
             print("Color: \(loco.color ?? "Unknown"); Chimney: \(Bool(loco.hasChimney))")
         }
+        
+        var arr: [Object] = []
+        for i in 0...50 {
+            arr.append(Object(bbbb: "Object no.: \(i)", cccc: i))
+        }
+        arr.query
     }
 
 }

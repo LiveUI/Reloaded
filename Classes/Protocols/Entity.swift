@@ -31,9 +31,9 @@ extension Entity where Self: NSManagedObject {
     }
     
     /// Create new query
-    public static var query: Query<Self> {
+    public static var query: CoreDataQuery<Self> {
         print(self)
-        return Query(self)
+        return CoreDataQuery(self)
     }
     
     /// Basic fetch request

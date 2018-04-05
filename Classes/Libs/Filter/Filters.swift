@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Query {
+extension CoreDataQuery {
     
     /// Basic filter
     @discardableResult public func filter(_ filters: QueryFilter ...) -> Self {
@@ -26,80 +26,80 @@ extension Query {
 }
 
 /// field == value
-public func == (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func ==(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
 }
-public func == (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func ==(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .equals, rhs)
 }
 
 /// field == value, case insensitive
 infix operator ==*
-public func ==* (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+public func ==*(lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .equals, rhs, false)
 }
-public func ==* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+public func ==*(lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .equals, rhs, false)
 }
 
 /// field CONTAINS value
 infix operator ~~
-public func ~~ (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+public func ~~(lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .contains, rhs)
 }
 
 /// field CONTAINS value, case insensitive
 infix operator ~~*
-public func ~~* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+public func ~~*(lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .contains, rhs, false)
 }
 
 /// field != value
-public func != (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func !=(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs)
 }
-public func != (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func !=(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs)
 }
 
 /// field != value, case insensitive
 infix operator !=*
-public func !=* (lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
+public func !=*(lhs: String, rhs: StringQueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs, false)
 }
-public func !=* (lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
+public func !=*(lhs: String, rhs: StringQueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .notEquals, rhs, false)
 }
 
 /// field > value
-public func > (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func >(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .greaterThan, rhs)
 }
-public func > (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func >(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .greaterThan, rhs)
 }
 
 /// field < value
-public func < (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func <(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .lessThan, rhs)
 }
-public func < (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func <(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .lessThan, rhs)
 }
 
 /// field >= value
-public func >= (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func >=(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .greaterThanOrEquals, rhs)
 }
-public func >= (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func >=(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .greaterThanOrEquals, rhs)
 }
 
 /// field <= value
-public func <= (lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
+public func <=(lhs: String, rhs: QueryDataRepresentable) -> QueryFilter {
     return _compare(lhs, .lessThanOrEquals,  rhs)
 }
-public func <= (lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
+public func <=(lhs: String, rhs: QueryDataRepresentable?) -> QueryFilter {
     return _compare(lhs, .lessThanOrEquals, rhs)
 }
 
