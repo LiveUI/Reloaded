@@ -29,35 +29,15 @@ public struct QueryFilterValue {
         }
     }
     
-//    /// Returns the `QueryData` value if it exists.
-//    public func data() -> [QueryData]? {
-//        switch storage {
-//        case .data(let data): return [data]
-//        case .array(let a): return a
-//        default: return nil
-//        }
-//    }
-    
-    /// Another query field.
+    /// Query field.
     public static func field(_ field: QueryField) -> QueryFilterValue {
         return .init(storage: .field(field))
     }
-    
-//    /// A single value.
-//    public static func data<T>(_ data: T) throws -> QueryFilterValue {
-//        return try .init(storage: .data(queryDataSerialize(data: data)))
-//    }
 
-//    /// A single value.
-//    public static func array<T>(_ array: [T]) throws -> QueryFilterValue {
-//        let array = try array.map { try queryDataSerialize(data: $0) }
-//        return .init(storage: .array(array))
-//    }
-
-//    /// A sub query.
-//    public static func subquery(_ subquery: DatabaseQuery) -> QueryFilterValue {
-//        return .init(storage: .subquery(subquery))
-//    }
+    /// An array of supported values
+    public static func array<T>(_ array: [T]) throws -> QueryFilterValue where T: QueryDataRepresentable {
+        return .init(storage: .array(array))
+    }
     
     /// No value.
     public static func none() -> QueryFilterValue {

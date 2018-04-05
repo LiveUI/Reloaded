@@ -22,6 +22,11 @@ public class CoreData {
     /// Default implementation, should be sufficient in most cases
     public static let `default` = CoreData()
     
+    /// Fallback container name, overrides bundle name globally
+    /// Use in multitarget apps with shared model
+    public static var fallbackContainerName: String?
+    
+    /// Container name
     let containerName: String
     
     // MARK: Initialization
@@ -29,7 +34,7 @@ public class CoreData {
     /// Initialize CoreData with an optional NSPersistentContainer name.
     /// App name will be used as default if nil
     public init(containerName: String? = nil) {
-        guard let containerName = containerName ?? Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as? String else {
+        guard let containerName = containerName ?? CoreData.fallbackContainerName ?? Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as? String else {
             fatalError("CoreData container name is not set and can not be inferred")
         }
         self.containerName = containerName
@@ -83,6 +88,7 @@ public class CoreData {
     
     // MARK: Private interface
     
+    /// Save context, private helper
     private static func save(context: NSManagedObjectContext) throws {
         if context.hasChanges {
             try context.save()

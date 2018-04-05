@@ -28,6 +28,7 @@ extension QueryDataRepresentable {
     
 }
 
+/// Internal substitute for
 struct NULL: ExactQueryDataRepresentable {
     
     var value: String {

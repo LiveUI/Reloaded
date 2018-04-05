@@ -37,6 +37,7 @@ public struct QueryFilter {
 
 extension QueryFilter {
     
+    /// Convert filter to predicate
     public func asPredicate() -> NSPredicate {
         if let value = value as? String {
             let predicate = NSPredicate(format: "\(field.name) \(type.interpretation)\(caseSensitive ? "" : "[c]") %@", value)
@@ -46,6 +47,9 @@ extension QueryFilter {
             return predicate
         } else if let value = value as? LosslessStringConvertible {
             let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) \(value)")
+            return predicate
+        } else if let value = value as? Date {
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) %@", value as CVarArg)
             return predicate
         }
         fatalError("Not implemented")

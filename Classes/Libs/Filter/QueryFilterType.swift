@@ -13,6 +13,7 @@ public struct QueryFilterType: Equatable {
     
     enum Storage: Equatable {
         case equals
+        case equalEquals
         case contains
         case beginsWith
         case endsWith
@@ -27,6 +28,8 @@ public struct QueryFilterType: Equatable {
     public var interpretation: String {
         switch storage {
         case .equals:
+            return "="
+        case .equalEquals:
             return "=="
         case .contains:
             return "CONTAINS"
@@ -52,8 +55,10 @@ public struct QueryFilterType: Equatable {
     /// Internal storage.
     let storage: Storage
     
-    /// ==
+    /// =
     public static var equals: QueryFilterType { return .init(storage: .equals) }
+    /// ==
+    public static var equalEquals: QueryFilterType { return .init(storage: .equalEquals) }
     /// CONTAINS
     public static var contains: QueryFilterType { return .init(storage: .contains) }
     /// BEGINSWITH
