@@ -19,7 +19,7 @@ A brand new Swift abstraction layer for CoreData's original interface
 
 ## Setup data model
 
-Well ,this is exactly the same process as you would do when setting up core data the old way. If you haven't created your app from a template, just:
+Well, this is exactly the same process as you would do when setting up core data the old way. If you haven't created your app from a template, just:
 * create a new **Data Model** file
 * give it the same name as your bundle has (Reloaded is trying to use `kCFBundleNameKey` to generate the expected name)
 * Create your entities as you would
