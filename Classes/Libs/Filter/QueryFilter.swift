@@ -51,6 +51,9 @@ extension QueryFilter {
         } else if let value = value as? Date {
             let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) %@", value as CVarArg)
             return predicate
+        } else if let _ = value as? NULL  {
+            let predicate = NSPredicate(format: "\(field.name) \(type.interpretation) nil")
+            return predicate
         }
         fatalError("Not implemented")
     }

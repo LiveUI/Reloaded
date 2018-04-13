@@ -49,4 +49,6 @@ let all = try! Locomotive.query.filter("color" == "red", "hasChimney" == true).s
 print(all)
 ```
 
+## Author
 
+Ondrej Rafaj (@rafiki270 on [Github](https://github.com/rafiki270), [Twitter](https://twitter.com/rafiki270) and [LiveUI Slack](http://bit.ly/2B0dEyt))
