@@ -43,6 +43,7 @@ extension QueryExecutable {
 
 extension QueryExecutable where EntityType: NSManagedObject {
     
+    /// Return all data based on your query
     public func all(on context: NSManagedObjectContext = CoreData.managedContext) throws -> [EntityType] {
         guard let data = try context.fetch(fetchRequest()) as? [EntityType] else {
             return []
@@ -50,12 +51,14 @@ extension QueryExecutable where EntityType: NSManagedObject {
         return data
     }
     
+    /// Delete all data captured by your query
     public func delete(on context: NSManagedObjectContext = CoreData.managedContext) throws {
         for object in try all(on: context) {
             try object.delete(on: context)
         }
         try context.save()
         
+        // TODO: Fix the following batch request!
 //        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest())
 //        do {
 //            let batchDeleteResult = try context.execute(deleteRequest) as! NSBatchDeleteResult
@@ -66,10 +69,12 @@ extension QueryExecutable where EntityType: NSManagedObject {
 //        }
     }
     
+    /// Count the number of items in your query
     public func count(on context: NSManagedObjectContext = CoreData.managedContext) throws -> Int {
         return try context.count(for: fetchRequest())
     }
     
+    /// Get first result of your query
     public func first(on context: NSManagedObjectContext = CoreData.managedContext) throws -> EntityType? {
         return try context.fetch(fetchRequest()).first as? EntityType
     }

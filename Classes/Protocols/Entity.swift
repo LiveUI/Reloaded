@@ -32,7 +32,11 @@ extension Entity where Self: NSManagedObject {
     
     /// Create new query
     public static var query: Query<Self> {
-        print(self)
+        return Query(self)
+    }
+    
+    /// Create new query
+    public static func query(on: DispatchQueue) -> Query<Self> {
         return Query(self)
     }
     
