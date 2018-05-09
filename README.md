@@ -13,16 +13,20 @@ A brand new Swift abstraction layer for CoreData's original interface
 [![License](https://img.shields.io/cocoapods/l/Reloaded.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
 
 
-##
-
-> <b style="color:red;">Warning! - *Project is not yet completely finished. We are going to release an alpha version in April, contact us on Slack for ETA or follow the status below*</b>
-
 ## Setup data model
 
 Well, this is exactly the same process as you would do when setting up core data the old way. If you haven't created your app from a template, just:
 * create a new **Data Model** file
 * give it the same name as your bundle has (Reloaded is trying to use `kCFBundleNameKey` to generate the expected name)
 * Create your entities as you would
+
+> You can also override the default container name for use in multi-target apps using `CoreData.fallbackContainerName`
+
+```swift
+/// Fallback container name, overrides bundle name globally
+/// Use in multitarget apps with shared model
+public static var fallbackContainerName: String?
+```
 
 ## Basic usage
 
