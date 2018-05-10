@@ -35,11 +35,6 @@ extension Entity where Self: NSManagedObject {
         return Query(self)
     }
     
-    /// Create new query
-    public static func query(on: DispatchQueue) -> Query<Self> {
-        return Query(self)
-    }
-    
     /// Basic fetch request
     public static var fetchRequest: Request {
         let fetch = Request(entityName: entityName)

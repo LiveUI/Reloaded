@@ -28,6 +28,18 @@
 		15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15115DA3206E1E5000BC08D3 /* QuerySort.swift */; };
 		15115DED206E5AF400BC08D3 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75910206D36460080AB5E /* Setup.swift */; };
 		15115DEE206E5AFC00BC08D3 /* ReloadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75878206D30FD0080AB5E /* ReloadedTests.swift */; };
+		15A7BD1320A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */; };
+		15A7BD1420A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */; };
+		15A7BD1520A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */; };
+		15A7BD1620A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */; };
+		15A7BD1820A4CB72000BAD54 /* QueryExecutable+Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */; };
+		15A7BD1920A4CB72000BAD54 /* QueryExecutable+Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */; };
+		15A7BD1A20A4CB73000BAD54 /* QueryExecutable+Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */; };
+		15A7BD1B20A4CB73000BAD54 /* QueryExecutable+Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */; };
+		15A7BD1D20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */; };
+		15A7BD1E20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */; };
+		15A7BD1F20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */; };
+		15A7BD2020A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */; };
 		15B7587B206D30FD0080AB5E /* Reloaded.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B7586D206D30FD0080AB5E /* Reloaded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15B75894206D316E0080AB5E /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75886206D316E0080AB5E /* Array+NSPredicate.swift */; };
 		15B75895206D316E0080AB5E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B75888206D316E0080AB5E /* Query.swift */; };
@@ -109,10 +121,12 @@
 		15115DA3206E1E5000BC08D3 /* QuerySort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySort.swift; sourceTree = "<group>"; };
 		15115DAF206E256800BC08D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		15115DB0206E256800BC08D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		15115DC0206E548700BC08D3 /* CoreData+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Tests.swift"; sourceTree = "<group>"; };
 		15115DDC206E592A00BC08D3 /* ReloadedTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReloadedTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15115DE0206E592B00BC08D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15116A662070236100BC08D3 /* Reloaded.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Reloaded.podspec; sourceTree = "<group>"; };
+		15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryExecutable+ManagedObject.swift"; sourceTree = "<group>"; };
+		15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryExecutable+Threading.swift"; sourceTree = "<group>"; };
+		15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPromise.swift; sourceTree = "<group>"; };
 		15B7586A206D30FD0080AB5E /* Reloaded.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reloaded.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B7586D206D30FD0080AB5E /* Reloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reloaded.h; sourceTree = "<group>"; };
 		15B7586E206D30FD0080AB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,22 +243,6 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
-		15115DBE206E543400BC08D3 /* ReloadedTestTools */ = {
-			isa = PBXGroup;
-			children = (
-				15115DBF206E545D00BC08D3 /* Extensions */,
-			);
-			path = ReloadedTestTools;
-			sourceTree = "<group>";
-		};
-		15115DBF206E545D00BC08D3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				15115DC0206E548700BC08D3 /* CoreData+Tests.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		15115DC4206E564500BC08D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +264,6 @@
 				15115DAE206E255100BC08D3 /* Other */,
 				15115D72206D853800BC08D3 /* Demo-iOS */,
 				15B75884206D316E0080AB5E /* Classes */,
-				15115DBE206E543400BC08D3 /* ReloadedTestTools */,
 				15B7586C206D30FD0080AB5E /* Reloaded-macOS */,
 				15B758A5206D32B00080AB5E /* Reloaded-iOS */,
 				15B758C1206D32E50080AB5E /* Reloaded-tvOS */,
@@ -326,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				15B75886206D316E0080AB5E /* Array+NSPredicate.swift */,
+				15A7BD1220A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift */,
+				15A7BD1720A4CB72000BAD54 /* QueryExecutable+Threading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +336,7 @@
 				15B7588A206D316E0080AB5E /* QueryField.swift */,
 				15B7588B206D316E0080AB5E /* Filter */,
 				15115DA2206E1E2F00BC08D3 /* Sorting */,
+				15A7BD1C20A4CBF8000BAD54 /* CoreDataPromise.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -677,9 +677,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A7BD1D20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */,
 				15115D99206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B7589A206D316E0080AB5E /* Filters.swift in Sources */,
 				15115DA4206E1E5000BC08D3 /* QuerySort.swift in Sources */,
+				15A7BD1820A4CB72000BAD54 /* QueryExecutable+Threading.swift in Sources */,
 				15B75896206D316E0080AB5E /* Sorting.swift in Sources */,
 				15B75897206D316E0080AB5E /* QueryField.swift in Sources */,
 				15B75899206D316E0080AB5E /* QueryFilterType.swift in Sources */,
@@ -690,6 +692,7 @@
 				15B75895206D316E0080AB5E /* Query.swift in Sources */,
 				15B75894206D316E0080AB5E /* Array+NSPredicate.swift in Sources */,
 				15B7589D206D316E0080AB5E /* QueryExecutable.swift in Sources */,
+				15A7BD1320A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */,
 				15B75898206D316E0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,9 +701,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A7BD1E20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */,
 				15115D9A206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B758DD206D330D0080AB5E /* Filters.swift in Sources */,
 				15115DA5206E1E5000BC08D3 /* QuerySort.swift in Sources */,
+				15A7BD1920A4CB72000BAD54 /* QueryExecutable+Threading.swift in Sources */,
 				15B758D9206D330D0080AB5E /* Sorting.swift in Sources */,
 				15B758DA206D330D0080AB5E /* QueryField.swift in Sources */,
 				15B758DC206D330D0080AB5E /* QueryFilterType.swift in Sources */,
@@ -711,6 +716,7 @@
 				15B758D8206D330D0080AB5E /* Query.swift in Sources */,
 				15B758D7206D330D0080AB5E /* Array+NSPredicate.swift in Sources */,
 				15B758E0206D330D0080AB5E /* QueryExecutable.swift in Sources */,
+				15A7BD1420A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */,
 				15B758DB206D330D0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,9 +725,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A7BD1F20A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */,
 				15115D9B206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B758E8206D330E0080AB5E /* Filters.swift in Sources */,
 				15115DA6206E1E5000BC08D3 /* QuerySort.swift in Sources */,
+				15A7BD1A20A4CB73000BAD54 /* QueryExecutable+Threading.swift in Sources */,
 				15B758E4206D330E0080AB5E /* Sorting.swift in Sources */,
 				15B758E5206D330E0080AB5E /* QueryField.swift in Sources */,
 				15B758E7206D330E0080AB5E /* QueryFilterType.swift in Sources */,
@@ -732,6 +740,7 @@
 				15B758E3206D330E0080AB5E /* Query.swift in Sources */,
 				15B758E2206D330E0080AB5E /* Array+NSPredicate.swift in Sources */,
 				15B758EB206D330E0080AB5E /* QueryExecutable.swift in Sources */,
+				15A7BD1520A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */,
 				15B758E6206D330E0080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,9 +749,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A7BD2020A4CBF8000BAD54 /* CoreDataPromise.swift in Sources */,
 				15115D9C206E1B4600BC08D3 /* QueryFilter.swift in Sources */,
 				15B75900206D33720080AB5E /* Filters.swift in Sources */,
 				15115DA7206E1E5000BC08D3 /* QuerySort.swift in Sources */,
+				15A7BD1B20A4CB73000BAD54 /* QueryExecutable+Threading.swift in Sources */,
 				15B758FC206D33720080AB5E /* Sorting.swift in Sources */,
 				15B758FD206D33720080AB5E /* QueryField.swift in Sources */,
 				15B758FF206D33720080AB5E /* QueryFilterType.swift in Sources */,
@@ -753,6 +764,7 @@
 				15B758FB206D33720080AB5E /* Query.swift in Sources */,
 				15B758FA206D33720080AB5E /* Array+NSPredicate.swift in Sources */,
 				15B75903206D33720080AB5E /* QueryExecutable.swift in Sources */,
+				15A7BD1620A4CB4D000BAD54 /* QueryExecutable+ManagedObject.swift in Sources */,
 				15B758FE206D33720080AB5E /* QueryFilterValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
