@@ -13,7 +13,7 @@ import CoreData
 extension QueryExecutable where EntityType: NSManagedObject {
     
     /// Return all data based on your query
-    public func all(on queue: DispatchQueue) -> CoreDataPromise<[EntityType]> {
+    public func all(on queue: DispatchQueue = .main) -> CoreDataPromise<[EntityType]> {
         // Create or get the right context for the desired queue
         // Execute query on the thread for the context
         // Fulfill promise
@@ -22,19 +22,19 @@ extension QueryExecutable where EntityType: NSManagedObject {
     }
     
     /// Delete all data captured by your query
-    public func delete(on queue: DispatchQueue) -> CoreDataPromise<Void> {
+    public func delete(on queue: DispatchQueue = .main) -> CoreDataPromise<Void> {
         // All above +
         // Update all contexts
         fatalError()
     }
     
     /// Count the number of items in your query
-    public func count(on queue: DispatchQueue) -> CoreDataPromise<Int>{
+    public func count(on queue: DispatchQueue = .main) -> CoreDataPromise<Int>{
         fatalError()
     }
     
     /// Get first result of your query
-    public func first(on queue: DispatchQueue) -> CoreDataPromise<EntityType?> {
+    public func first(on queue: DispatchQueue = .main) -> CoreDataPromise<EntityType?> {
         fatalError()
     }
     

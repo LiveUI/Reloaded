@@ -42,14 +42,35 @@ public class CoreData {
     
     // MARK: Basic methods
     
+    private var _privateManagedContext: NSManagedObjectContext?
+    private var _managedContext: NSManagedObjectContext?
+    
+    /// Private managed object context for this instance
+    public lazy var privateManagedContext: NSManagedObjectContext = {
+        guard let privateManagedContext = _privateManagedContext else {
+            // Create a background managed context as root context so the
+            // main thread should not be blocked on more expensive opersations
+            let privateManagedContext = persistentContainer.newBackgroundContext()
+            _privateManagedContext = privateManagedContext
+            return privateManagedContext
+        }
+        return privateManagedContext
+    }()
+    
     /// Managed context for this instance
-    public var managedContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
+    public lazy var managedContext: NSManagedObjectContext = {
+        guard let managedContext = _managedContext else {
+            let managedContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+            managedContext.parent = privateManagedContext
+            _managedContext = managedContext
+            return managedContext
+        }
+        return managedContext
+    }()
     
     /// Default managed context
     public static var managedContext: NSManagedObjectContext {
-        return CoreData.default.persistentContainer.viewContext
+        return CoreData.default.managedContext
     }
     
     /// Create new entry on the default context
@@ -78,12 +99,12 @@ public class CoreData {
     
     /// Save managed context if it has changes
     public func saveContext() throws {
-        try CoreData.save(context: managedContext)
+        try CoreData.save(context: privateManagedContext)
     }
     
     /// Save default managed context if it has changes
     public static func saveContext() throws {
-        try CoreData.save(context: managedContext)
+        try CoreData.default.saveContext()
     }
     
     // MARK: Private interface
