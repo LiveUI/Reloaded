@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'Reloaded'
-    s.version          = '1.0.1'
+    s.version          = '1.1.0'
     s.summary          = 'Reloaded! Swift "ORM like" abstraction layer for CoreData'
     s.swift_version    = '4.0'
 
