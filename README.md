@@ -5,7 +5,6 @@
 A brand new Swift abstraction layer for CoreData's original interface
 
 
-[![Slack](https://img.shields.io/badge/join-slack-745EAF.svg?style=flat)](http://bit.ly/2B0dEyt)
 [![Jenkins](https://ci.liveui.io/job/LiveUI/job/Boost/job/master/badge/icon)](https://ci.liveui.io/job/LiveUI/job/Reloaded/)
 [![Platforms](https://img.shields.io/badge/platforms-iOS%20|%20macOS|%20tvOS|%20watchOS-ff0000.svg?style=flat)](http://cocoapods.org/pods/Reloaded)
 [![Swift 4](https://img.shields.io/badge/swift-4.1-orange.svg?style=flat)](http://swift.org)
@@ -52,6 +51,11 @@ try! loco.save()
 let all = try! Locomotive.query.filter("color" == "red", "hasChimney" == true).sort(by: "color", direction: .orderedDescending).all()
 print(all)
 ```
+
+### Cocoapods & Carthage
+
+Sorry folks but we are ditching support for these two systems in favor of <b>Swift Package Manager</b>
+> Carthage might work, don't know but we won't be making sure it does anymore ...
 
 ## Author
 
