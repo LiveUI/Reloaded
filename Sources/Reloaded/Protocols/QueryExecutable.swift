@@ -11,6 +11,7 @@ import CoreData
 
 
 public protocol QueryExecutable {
+    
     associatedtype EntityType: Entity
     
     var entity: EntityType.Type { get }
@@ -20,9 +21,9 @@ public protocol QueryExecutable {
     var limit: Int? { get set }
     
     init(_ entityType: EntityType.Type)
-    func fetchRequest() -> Entity.Request
+//    func fetchRequest() -> Entity.Request
+    
 }
-
 
 extension QueryExecutable {
     

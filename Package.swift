@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -14,11 +14,11 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "Reloaded", dependencies: []),
-        .testTarget(
-            name: "ReloadedTests",
-            dependencies: [
-                "Reloaded"
-            ]
-        ),
+//        .testTarget(
+//            name: "ReloadedTests",
+//            dependencies: [
+//                "Reloaded"
+//            ]
+//        )
     ]
 )
